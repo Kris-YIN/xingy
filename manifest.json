@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Xing Prime",
+  "description": "This extension shows profile visitors without XING Premium",
+  "version": "1.0", 
+  "permissions": [
+  "https://www.xing.com/*",
+  "http://www.xing.com/*",
+  "tabs"
+  ],
+  "page_action": {
+  "default_title": "Xing Prime",
+  "default_popup": "popup.html"
+  }, 
+  "content_scripts": [
+  {
+  "matches": ["https://www.xing.com/*"],
+  "js": ["mutation-summary.js", "script_final.js"],
+  "run_at": "document_start"
+  }
+  ]
+}
